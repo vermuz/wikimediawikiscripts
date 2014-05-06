@@ -38,6 +38,7 @@ If you are using XAMPP,
 Create a subdirectory, tmp in the images folder.
 Allow access to your images folder.
 - Add following lines to your LocalSettings.php
+```php
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
 $wgEnableUploads = true;
@@ -54,7 +55,7 @@ $wgMSU_ImgParams = '400px';     #default max-size for inserted image
 $wgMSU_UseDragDrop = true;      #show drag&drop area
 require_once "$IP/extensions/MsUpload/msupload.php";
 ##End  --------------------------------------- MsUpload
-
+'''
 - Place the bulkinsert.php and snoopy class in your mediawiki folder.
 - Add mediawiki url and bot information to the bulkinsert.php script.
 - Execute the bulkinsert.php script on all files to be imported into mediawiki.
