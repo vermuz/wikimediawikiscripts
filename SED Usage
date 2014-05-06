@@ -1,0 +1,44 @@
+SED Usage Version 1
+
+Image tags break with square brackets upon import
+
+Change right] to right|
+
+sed -i "" 's/\|right\]/\|right\|/g' File
+
+Change whatever is being described as Top to #top]Top in Mediawiki 
+
+sed "" 's/\[\[[^|]*|Top\]\]/[[#top|Top]]/g' File
+
+Change wikispace bold syntax to ''' in mediawiki bold
+
+sed "" 's/\*\*/\'\'\'/g' File
+
+If the image needs to retain its caption in Mediawiki,
+It must have a thumb argument
+
+sed 's/\*.jpg\|/\*.jpg\|thumb\|/g' File
+sed "s/.jpg|/.jpg|thumb|/g" File
+
+and if there are a two thumbs replace with one
+
+sed "s/.jpg|thumb|thumb|/.jpg|thumb|/g" File
+
+
+Remove link = @-----
+
+sed "s/link=@/link=/g" File
+
+
+Remove ] after left
+
+sed 's/\|left\]/\|left\|/g' File
+
+Wikispaces redirects i.e, [[@Head Hall]] redirects to Sir Edmund Head Hall
+
+#REDIRECT [[pagename]]
+
+Get rid of print page line
+[[{$server}/{$page|url}?f=print|Print this page]]
+
+sed '/{$server}/d' File
