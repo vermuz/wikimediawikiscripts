@@ -1,6 +1,7 @@
 #!/usr/local/bin/python
 
-# Opens a file, grabs its filename - appends it to the top of the file and inserts ENDTitle after it.
+# Opens a file, grabs its filename - appends it to the top of the file and inserts ENDTIELE after it.
+# Appends ENDPAGE at the end of the page.
 
 import inspect, os
 from sys import argv
