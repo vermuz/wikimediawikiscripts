@@ -56,6 +56,7 @@ $wgMSU_UseDragDrop = true;      #show drag&drop area
 require_once "$IP/extensions/MsUpload/msupload.php";
 ##End  --------------------------------------- MsUpload
 '''
+
 - Place the bulkinsert.php and snoopy class in your mediawiki folder.
 - Add mediawiki url and bot information to the bulkinsert.php script.
 - Execute the bulkinsert.php script on all files to be imported into mediawiki.
